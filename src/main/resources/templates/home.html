@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Cloud | Home</title>
+    <link rel="stylesheet" th:href="@{/images/styles.css}" />
 </head>
 <body>
     <h1>Welcome to...</h1>
-    <img th:src="@{/images/pizza-cloud-logo.svg}" alt="logo" th:width="400">
+   <div th:id="logo">
+       <img th:src="@{/images/pizza-cloud-logo.svg}" th:alt="logo" th:width="400">
+   </div>
 
+    <a th:href="@{/}">Design a piece of pizza</a>
 </body>
 </html>
