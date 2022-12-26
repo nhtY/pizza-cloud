@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Cloud | Home</title>
-    <link rel="stylesheet" th:href="@{/images/styles.css}" />
+    <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
 <body>
-    <h1>Welcome to...</h1>
-   <div th:id="logo">
-       <img th:src="@{/images/pizza-cloud-logo.svg}" th:alt="logo" th:width="400">
-   </div>
+    <div th:class="center">
+        <h1>Welcome to...</h1>
+        <div th:class="center" th:id="logo">
+            <img th:src="@{/images/pizza-cloud-logo.svg}" th:alt="logo" th:class="center">
+        </div>
 
-    <a th:href="@{/}">Design a piece of pizza</a>
+        <a th:class="center" th:href="@{/}">Design a piece of pizza</a>
+    </div>
 </body>
 </html>
