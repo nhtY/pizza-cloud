@@ -10,6 +10,6 @@ public class Ingredient {
     private final Type type;
 
     public enum Type {
-        PROTEIN, CHEESE, VEGGIES
+        PROTEiN, CHEESE, VEGGiES // i char for ENG letter problem
     }
 }

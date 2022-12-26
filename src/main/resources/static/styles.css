@@ -1,5 +1,18 @@
+body {
+    background: antiquewhite;
+}
+
+.grid {
+    box-sizing: border-box;
+}
+
+
+#logo {
+    height: 400px;
+}
+
 .center {
-    width: 80%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -8,12 +21,32 @@
     text-align: center;
 }
 
-
-img {
-    height: 400px;
-
+.row {
+    width: 25%;
+    float: left;
+    margin: 4%;
 }
-h1 {
+
+.checkbox {
+    width: 40%;
+    float: left;
+}
+
+.break {
+    clear: both;
+}
+
+img.type {
+    width: 30%;
+    float: left;
+}
+
+h1, h3 {
     color: cadetblue;
+    text-align: center;
+}
+
+button {
+    width: 200px;
 }
 
