@@ -24,10 +24,10 @@ public class DesignPizzaController {
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
         List<Ingredient> ingredients = Arrays.asList(
-                new Ingredient("SCK", "Dana Sucuk", Ingredient.Type.PROTEiN),
+                new Ingredient("SCK", "Sucuk", Ingredient.Type.PROTEiN),
                 new Ingredient("SOSIS", "Sosis", Ingredient.Type.PROTEiN),
                 new Ingredient("SLM", "Salam", Ingredient.Type.PROTEiN),
-                new Ingredient("MZRLL", "Mozerella Peyniri", Ingredient.Type.CHEESE),
+                new Ingredient("MZRLL", "Mozerella", Ingredient.Type.CHEESE),
                 new Ingredient("BYZ", "Beyaz Peynir", Ingredient.Type.CHEESE),
                 new Ingredient("CHD", "Cheddar Peyniri", Ingredient.Type.CHEESE),
                 new Ingredient("MNTR", "Mantar", Ingredient.Type.VEGGiES),

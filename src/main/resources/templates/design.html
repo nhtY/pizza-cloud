@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    <div th:class="grid">
+    <div th:class="container">
         <h1 th:class="center">Mazlemeleri Seçmekte Özgürsün</h1>
         <hr>
 
-        <form method="POST" th:object="${pizza}" >
+        <form method="POST" th:object="${pizza}">
 
             <h3>PROTEIN</h3>
             <div th:each="ingredient : ${protein}" th:class="row">
@@ -21,7 +21,7 @@
                           th:value="${ingredient.id}">
                    <span th:text="${ingredient.name}">INGREDIENT</span>
                </div>
-                <img th:src="@{/images/pizza-cloud-logo.svg}" th:alt="img" th:class="type">
+                <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
             </div>
 
             <div th:class="break"></div>
@@ -35,7 +35,7 @@
                     <span th:text="${ingredient.name}">INGREDIENTS</span>
 
                 </div>
-                <img th:src="@{/images/pizza-cloud-logo.svg}" th:alt="img" th:class="type">
+                <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
             </div>
 
             <div th:class="break"></div>
@@ -48,22 +48,22 @@
                            th:value="${ingredient.id}">
                     <span th:text="${ingredient.name}">INGREDIENT</span>
                 </div>
-                <img th:src="@{/images/pizza-cloud-logo.svg}" th:alt="img" th:class="type">
+                <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
             </div>
 
             <div th:class="break"></div>
             <hr>
 
             <div th:class="center">
-                <label th:for="*{name}">Enter a pizza name:</label>
+                <label th:for="*{name}">Pizzanıza isim verin:</label>
                 <br>
 
-                <input th:field="*{name}" th:type="text" placeholder="my favourite pizza">
+                <input th:field="*{name}" th:type="text" placeholder="favori pizzam">
             </div>
             <br>
 
             <div th:class="center">
-                <button type="submit" th:class="button">Submit Your Pizza</button>
+                <button type="submit" th:class="button">Tamam</button>
             </div>
 
         </form>
