@@ -62,7 +62,8 @@ public class DesignPizzaController {
 
         pizzaOrder.addPizza(pizza);
         log.info("Processing pizza: {}", pizza);
-        return "redirect/orders/current";
+        log.info("Pizzas: {}" , pizzaOrder.getPizzas());
+        return "redirect:/orders/current";
     }
 
     private Iterable<Ingredient> filterByType(List<Ingredient> ingredients, Ingredient.Type type ) {

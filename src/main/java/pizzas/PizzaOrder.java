@@ -1,6 +1,6 @@
 package pizzas;
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ public class PizzaOrder {
 
     // delivery address data
     private String deliveryName;
+
     private String deliveryStreet;
 
     private String deliveryCity;

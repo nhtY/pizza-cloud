@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head>
+  <title>Pizza Cloud</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+  <div th:class="center">
+    <form method="POST" th:action="@{/orders}" th:object="${pizzaOrder}">
+      <h1>Tasarladığınız Pizzayı Sipariş Edin!</h1>
+
+      <img th:src="@{/images/pizza-cloud-logo.svg}" height="120px" th:class="center"/>
+
+      <h3>Siparişinizdeki pizzalar:</h3>
+      <a th:href="@{/design}" id="another">Bir pizza daha tasarla</a><br/>
+      <ul>
+        <li th:each="pizza : ${pizzaOrder.pizzas}">
+          <span th:text="${pizza.name}">pizza name</span></li>
+      </ul>
+
+      <h3>Şu adrese teslim et...</h3>
+      <div class="form-field">
+        <label th:for="deliveryName">Alıcı-İsim: </label>
+        <input type="text" th:field="*{deliveryName}"/>
+      </div>
+      <br/>
+
+      <div class="form-field">
+        <label th:for="deliveryStreet">Cadde/Sokak: </label>
+        <input type="text" th:field="*{deliveryStreet}"/>
+      </div>
+      <br/>
+
+      <div class="form-field">
+        <label th:for="deliveryCity">Şehir: </label>
+        <input type="text" th:field="*{deliveryCity}"/>
+      </div>
+      <br/>
+
+      <div class="form-field">
+        <label th:for="deliveryZip">Zip kodu: </label>
+        <input type="text" th:field="*{deliveryZip}"/>
+      </div>
+      <br/>
+
+      <h3>Ödeme bilgileri...</h3>
+      <div class="form-field">
+        <label th:for="ccNumber">Kredi Kartı #: </label>
+        <input type="text" th:field="*{ccNumber}"/>
+      </div>
+      <br/>
+      <div class="form-field">
+        <label th:for="ccExpiration">Expiration: </label>
+        <input type="text" th:field="*{ccExpiration}"/>
+      </div>
+      <br/>
+      <div class="form-field">
+        <label th:for="${ccCVV}">CVV: </label>
+        <input type="text" th:field="*{ccCVV}"/>
+      </div>
+      <br/>
+      <input type="submit" value="Siparişi Onayla"/>
+    </form>
+  </div>
+
+</body>
+</html>
