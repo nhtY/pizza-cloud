@@ -5,13 +5,13 @@ I am trying to apply the knowledge I am gaining from the book. So it is an ongoi
 ## Current State
 
 **root path**
-![rootPath](src/SS/img.png)
+![img](https://user-images.githubusercontent.com/89942570/210180151-a69467b1-cc18-45fd-b475-50000ef685fb.png)
 ---
 **design page**
-![design](src/SS/img_1.png)
+![img_1](https://user-images.githubusercontent.com/89942570/210180144-330f7e31-9bb3-4e8a-9ef6-675c7b476f47.png)
 ---
 **order form**
-![orderForm](src/SS/img_2.png)
+![img_2](https://user-images.githubusercontent.com/89942570/210180148-c6727e5a-92d6-414c-a2ed-726dae730a66.png)
 ---
 **order form warnings**
-![orderFormWarnings](src/SS/img_3.png)
+![img_3](https://user-images.githubusercontent.com/89942570/210180149-eb4c3b7d-40c9-46b5-996a-d514d7800520.png)
