@@ -59,11 +59,17 @@
                 <br>
 
                 <input th:field="*{name}" th:type="text" placeholder="favori pizzam">
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('name')}"
+                      th:errors="*{name}">name Error</span>
             </div>
             <br>
 
             <div th:class="center">
                 <button type="submit" th:class="button">Tamam</button>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('ingredients')}"
+                      th:errors="*{ingredients}">ingredients Error</span>
             </div>
 
         </form>
