@@ -1,10 +1,12 @@
 package pizzas;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -57,8 +59,12 @@ public class DesignPizzaController {
     }
 
     @PostMapping
-    public String processPizza(Pizza pizza,
+    public String processPizza(@Valid Pizza pizza, Errors errors,
                               @ModelAttribute PizzaOrder pizzaOrder) {
+
+        if(errors.hasErrors()) {
+            return "design"; // same page
+        }
 
         pizzaOrder.addPizza(pizza);
         log.info("Processing pizza: {}", pizza);
