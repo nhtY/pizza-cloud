@@ -3,6 +3,7 @@ Pizza Cloud is a web application which is being developed with Spring Boot in Ja
 I am trying to apply the knowledge I am gaining from the book. So it is an ongoing project now.
 ---
 ## Current State
+Yes, the design is not beautiful for now. :(
 
 **root path**
 ![img](https://user-images.githubusercontent.com/89942570/210180151-a69467b1-cc18-45fd-b475-50000ef685fb.png)
