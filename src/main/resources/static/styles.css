@@ -27,10 +27,22 @@ body {
     display: inline-block;
     text-align: center;
     margin: 12px;
-    padding: 8px;
+    /* padding: 8px; */
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 10px 5px 5px black;
+}
+
+.clickableLabel {
+    /* border:1px solid #ccc; */
+    padding:10px;
+    /* margin:0 0 10px; */
+    display:block;
+}
+
+.clickableLabel:hover {
+    background: #79a9ab;
+    cursor:pointer;
 }
 
 .checkbox {

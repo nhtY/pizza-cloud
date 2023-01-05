@@ -16,12 +16,14 @@
 
             <h3>PROTEIN</h3>
             <div th:each="ingredient : ${protein}" th:class="row">
-               <div th:class="checkbox">
-                   <input th:field="*{ingredients}" type="checkbox"
-                          th:value="${ingredient.id}">
-                   <span th:text="${ingredient.name}">INGREDIENT</span>
-               </div>
-                <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
+                <label class="clickableLabel">
+                   <div th:class="checkbox">
+                       <input th:field="*{ingredients}" type="checkbox"
+                              th:value="${ingredient.id}">
+                       <span th:text="${ingredient.name}">INGREDIENT</span>
+                   </div>
+                    <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
+                </label>
             </div>
 
             <div th:class="break"></div>
@@ -29,13 +31,15 @@
 
             <h3>PEYNİR</h3>
             <div th:each="ingredient : ${cheese}" th:class="row">
-                <div th:class="checkbox">
-                    <input th:field="*{ingredients}" th:type="checkbox"
-                           th:value="${ingredient.id}">
-                    <span th:text="${ingredient.name}">INGREDIENTS</span>
+                <label class="clickableLabel">
+                    <div th:class="checkbox">
+                        <input th:field="*{ingredients}" th:type="checkbox"
+                               th:value="${ingredient.id}">
+                        <span th:text="${ingredient.name}">INGREDIENTS</span>
 
-                </div>
-                <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
+                    </div>
+                    <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
+                </label>
             </div>
 
             <div th:class="break"></div>
@@ -43,13 +47,18 @@
 
             <h3>SEBZE-MEYVE</h3>
             <div th:each="ingredient : ${veggies}" th:class="row">
-                <div th:class="checkbox">
-                    <input th:field="*{ingredients}" type="checkbox"
-                           th:value="${ingredient.id}">
-                    <span th:text="${ingredient.name}">INGREDIENT</span>
-                </div>
-                <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
+                <label class="clickableLabel">
+                    <div th:class="checkbox">
+                        <input th:field="*{ingredients}" type="checkbox"
+                               th:value="${ingredient.id}">
+                        <span th:text="${ingredient.name}">INGREDIENT</span>
+                    </div>
+                    <img th:src="@{'/images/ingredientImage/'+${ingredient.id}+'.jpg'}" th:alt="img" th:class="type">
+                </label>
             </div>
+
+
+
 
             <div th:class="break"></div>
             <hr>
