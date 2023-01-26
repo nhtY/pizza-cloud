@@ -72,7 +72,11 @@ button {
 .form-field {
     text-align: left;
     margin-bottom: 8px;
-    display: inline-block;
+    display: inline-grid;
+}
+
+.form-field input {
+    width: 240px;
 }
 
 .validationError {
