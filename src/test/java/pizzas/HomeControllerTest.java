@@ -10,7 +10,7 @@ import pizzas.web.WebConfig;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(WebConfig.class)   // Web test for HomeController
+@WebMvcTest // @WebMvcTest(HomeController) --> Web test for HomeController // HomeController was deleted...
 public class HomeControllerTest {
     @Autowired
     private MockMvc mockMvc;    // injects MockMvc
