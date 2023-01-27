@@ -8,10 +8,14 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
 public class PizzaOrder implements Serializable {
+
+    private Long id;
+    private Date placedAt;
 
     /** The name of the person who will receive the order **/
     @NotBlank(message = "Teslim alacak kişinin adı gereklidir")
