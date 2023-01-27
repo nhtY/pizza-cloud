@@ -22,13 +22,13 @@ create table if not exists Pizza (
     );
 
 create table if not exists Ingredient_Ref (
-    ingredient varchar(4) not null,
+    ingredient varchar(6) not null,
     pizza bigint not null,
     pizza_key bigint not null
     );
 
 create table if not exists Ingredient (
-    id varchar(4) not null unique,
+    id varchar(6) not null unique,
     name varchar(25) not null,
     type varchar(10) not null
     );
