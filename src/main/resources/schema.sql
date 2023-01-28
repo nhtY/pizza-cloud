@@ -11,7 +11,7 @@ create table if not exists Pizza_Order (
     cc_expiration varchar(5) not null,
     cc_cvv varchar(3) not null,
     placed_at timestamp not null
-    );
+);
 
 create table if not exists Pizza (
     id identity,
@@ -19,19 +19,19 @@ create table if not exists Pizza (
     pizza_order bigint not null,
     pizza_order_key bigint not null,
     created_at timestamp not null
-    );
+);
 
 create table if not exists Ingredient_Ref (
     ingredient varchar(6) not null,
     pizza bigint not null,
     pizza_key bigint not null
-    );
+);
 
 create table if not exists Ingredient (
     id varchar(6) not null unique,
     name varchar(25) not null,
     type varchar(10) not null
-    );
+);
 
 alter table Pizza
     add foreign key (pizza_order) references Pizza_Order(id);

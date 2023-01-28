@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 import pizzas.Ingredient;
 import pizzas.Pizza;
 import pizzas.PizzaOrder;
+import pizzas.data.IngredientRepository;
 
-
-import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Controller
 @RequestMapping("/design")
@@ -23,21 +22,15 @@ import java.util.stream.Collectors;
 @SessionAttributes("pizzaOrder")
 public class DesignPizzaController {
 
+    private IngredientRepository ingredientRepo;
+
+    public DesignPizzaController(IngredientRepository ingredientRepo) {
+        this.ingredientRepo = ingredientRepo;
+    }
+
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
-        List<Ingredient> ingredients = Arrays.asList(
-                new Ingredient("SCK", "Sucuk", Ingredient.Type.PROTEiN),
-                new Ingredient("SOSIS", "Sosis", Ingredient.Type.PROTEiN),
-                new Ingredient("SLM", "Salam", Ingredient.Type.PROTEiN),
-                new Ingredient("MZRLL", "Mozerella", Ingredient.Type.CHEESE),
-                new Ingredient("BYZ", "Beyaz Peynir", Ingredient.Type.CHEESE),
-                new Ingredient("CHD", "Cheddar Peyniri", Ingredient.Type.CHEESE),
-                new Ingredient("MNTR", "Mantar", Ingredient.Type.VEGGiES),
-                new Ingredient("ZYT", "Zeytin", Ingredient.Type.VEGGiES),
-                new Ingredient("MSR", "Mısır", Ingredient.Type.VEGGiES),
-                new Ingredient("SGN", "Soğan", Ingredient.Type.VEGGiES),
-                new Ingredient("PTL", "Patlıcan", Ingredient.Type.VEGGiES)
-                );
+        Iterable<Ingredient> ingredients = ingredientRepo.findAll();
 
         Ingredient.Type[] types = Ingredient.Type.values();
         for (val type : types) {
@@ -75,8 +68,8 @@ public class DesignPizzaController {
         return "redirect:/orders/current";
     }
 
-    private Iterable<Ingredient> filterByType(List<Ingredient> ingredients, Ingredient.Type type ) {
-        return ingredients.stream()
+    private Iterable<Ingredient> filterByType(Iterable<Ingredient> ingredients, Ingredient.Type type ) {
+        return StreamSupport.stream(ingredients.spliterator(), false)
                 .filter(x -> x.getType().equals(type))
                 .collect(Collectors.toList());
     }
