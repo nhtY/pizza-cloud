@@ -28,12 +28,12 @@ public class JdbcOrderRepository implements OrderRepository {
         PreparedStatementCreatorFactory pscf = new PreparedStatementCreatorFactory(
                 "insert into Pizza_Order "
                         + "(delivery_name, delivery_street, delivery_city, "
-                        + "delivery_state, delivery_zip, cc_number, "
-                        + "cc_expiration, cc_vv, placed_at) "
-                        + "values (?,?,?,?,?,?,?,?,?)",
+                        + "delivery_zip, cc_number, "
+                        + "cc_expiration, cc_cvv, placed_at) "
+                        + "values (?,?,?,?,?,?,?,?)",
                 Types.VARCHAR, Types.VARCHAR, Types.VARCHAR,
                 Types.VARCHAR, Types.VARCHAR, Types.VARCHAR,
-                Types.VARCHAR, Types.VARCHAR, Types.TIMESTAMP
+                Types.VARCHAR, Types.TIMESTAMP
         );
 
         // generated id value is needed for savePizza()
