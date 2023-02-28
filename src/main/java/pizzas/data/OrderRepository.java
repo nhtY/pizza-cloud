@@ -1,13 +1,8 @@
 package pizzas.data;
 
+import org.springframework.data.repository.CrudRepository;
 import pizzas.PizzaOrder;
 
-public interface OrderRepository {
-    /**
-     * Insert a new PizzaOrder into the database.
-     * @param order PizzaOrder
-     * @return saved PizzaOrder
-     */
-    PizzaOrder save(PizzaOrder order);
+public interface OrderRepository extends CrudRepository<PizzaOrder, Long> {
 
 }
