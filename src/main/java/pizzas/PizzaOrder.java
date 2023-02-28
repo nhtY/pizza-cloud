@@ -1,5 +1,6 @@
 package pizzas;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -12,10 +13,13 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Entity
 public class PizzaOrder implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Date placedAt;
+    private Date placedAt = new Date();
 
     /** The name of the person who will receive the order **/
     @NotBlank(message = "Teslim alacak kişinin adı gereklidir")
@@ -48,6 +52,7 @@ public class PizzaOrder implements Serializable {
     private String ccCVV;
 
     /** List of ordered pizzas **/
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Pizza> pizzas = new ArrayList<>();
 
     /**
