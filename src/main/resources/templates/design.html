@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Pizza Design</title>
@@ -12,7 +12,7 @@
         <h1 th:class="center">Mazlemeleri Seçmekte Özgürsün</h1>
         <hr>
 
-        <form method="POST" th:object="${pizza}">
+        <form method="POST" th:object="${pizza}" th:action="@{/design}" id="pizzaForm">
 
             <h3>PROTEIN</h3>
             <div th:each="ingredient : ${protein}" th:class="row">

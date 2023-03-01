@@ -9,32 +9,32 @@
 
     <h1>Register</h1>
 
-    <img th:src=@"{/images/PizzaCloud.png}">
+    <img th:src="@{/images/pizza-cloud-logo.svg}">
 
     <form th:action="@{/register}" method="POST" id="registerForm">
 
-        <label for="username">Kullanıcı Adı: </label>
+        <label th:for="username">Kullanıcı Adı: </label>
         <input type="text" name="username"> <br>
 
-        <label for="password">Şifre: </label>
+        <label th:for="password">Şifre: </label>
         <input type="password" name="password"> <br>
 
-        <label for="confirm">Şifre tekrar: </label>
+        <label th:for="confirm">Şifre tekrar: </label>
         <input type="password" name="confirm"> <br>
 
-        <label for="fullname">İsim soyisim: </label>
-        <input type="text" name="fullname"> <br>
+        <label th:for="fullName">İsim soyisim: </label>
+        <input type="text" name="fullName"> <br>
 
-        <label for="street">Cadde: </label>
-        <input type="text" name="username"> <br>
+        <label th:for="street">Cadde: </label>
+        <input type="text" name="street"> <br>
 
-        <label for="city">Şehir: </label>
-        <input type="text" name="username"> <br>
+        <label th:for="city">Şehir: </label>
+        <input type="text" name="city"> <br>
 
-        <label for="zip">Zip: </label>
+        <label th:for="zip">Zip: </label>
         <input type="text" name="zip"> <br>
 
-        <label for="phone">Telefon: </label>
+        <label th:for="phone">Telefon: </label>
         <input type="text" name="phone"> <br>
 
         <input type="submit" value="Kayıt Ol">
