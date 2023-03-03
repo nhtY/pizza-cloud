@@ -39,8 +39,14 @@ public class SecurityConfig {
                                 .anyRequest().authenticated()
                 )
                 .formLogin()
-                    .loginPage("/login").permitAll()
-                        .defaultSuccessUrl("/design");
+                .loginPage("/login").permitAll()
+                .defaultSuccessUrl("/design")
+                .and()
+                .oauth2Login()
+                .loginPage("/login")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/");
         return http.build();
     }
 
