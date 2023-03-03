@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://thymeleaf.org">
-  <head>
-      <meta charset="UTF-8">
-      <title>Pizza Cloud | Login</title>
-  </head>
-  <body>
-    <h1>Login</h1>
-    <img th:src="@{/images/pizza-cloud-logo.svg}">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Cloud | Login</title>
+</head>
+<body>
+<h1>Login</h1>
+<img th:src="@{/images/pizza-cloud-logo.svg}">
 
-    <div th:if="${error}">
-      Giriş gerçekleştirilemedi. Kullanıcı adınızı ve şifrenizi kontrol ediniz.
-    </div>
+<div th:if="${error}">
+  Giriş gerçekleştirilemedi. Kullanıcı adınızı ve şifrenizi kontrol ediniz.
+</div>
 
-    <p>Hesabınız yok mu? Tıklayın:
-      <a th:href="@{/register}">kaydol</a>
-    </p>
+<p>Hesabınız yok mu? Tıklayın:
+  <a th:href="@{/register}">kaydol</a>
+</p>
+<hr>
 
-    <form method="POST" th:action="@{/login}" id="loginForm">
+<a href="https://accounts.google.com/o/oauth2/auth">
+  Google ile giriş yap..
+</a>
+<hr>
 
-      <label for="username">Kullanıcı adı: </label>
-      <input type="text" name="username" id="username"><br>
+<form method="POST" th:action="@{/login}" id="loginForm">
 
-      <label for="password">Şifre: </label>
-      <input type="password" name="password" id="password"><br>
+  <label for="username">Kullanıcı adı: </label>
+  <input type="text" name="username" id="username"><br>
 
-      <input type="submit" value="Login">
+  <label for="password">Şifre: </label>
+  <input type="password" name="password" id="password"><br>
 
-    </form>
+  <input type="submit" value="Login">
 
-  </body>
+</form>
+
+</body>
 </html>
