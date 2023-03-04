@@ -39,11 +39,11 @@ public class SecurityConfig {
                                 .anyRequest().authenticated()
                 )
                 .formLogin()
-                .loginPage("/login").permitAll()
+                .loginPage("/login")//.permitAll()
                 .defaultSuccessUrl("/design")
                 .and()
                 .oauth2Login()
-                .loginPage("/login")
+                .loginPage("/login").permitAll()
                 .and()
                 .logout()
                 .logoutSuccessUrl("/");

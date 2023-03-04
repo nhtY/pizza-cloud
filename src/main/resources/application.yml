@@ -14,5 +14,9 @@ spring:
           google:
             clientId: ##
             clientSecret: ##
-            scope: ##
-            #redirect-uri: ##
+            scope: https://www.googleapis.com/auth/userinfo.profile, https://www.googleapis.com/auth/userinfo.email, openid #
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
