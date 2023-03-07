@@ -8,11 +8,19 @@ Yes, the design is not beautiful **yet** :(
 **root path**
 ![img](https://user-images.githubusercontent.com/89942570/210180151-a69467b1-cc18-45fd-b475-50000ef685fb.png)
 ---
+
 **design page**
-![img_1](https://user-images.githubusercontent.com/89942570/210180144-330f7e31-9bb3-4e8a-9ef6-675c7b476f47.png)
+
+![img_1](https://user-images.githubusercontent.com/89942570/223546119-a381326d-43cc-427b-8b1e-73de43053192.png)
+
 ---
+
 **order form**
-![img_2](https://user-images.githubusercontent.com/89942570/210180148-c6727e5a-92d6-414c-a2ed-726dae730a66.png)
+
+![img_2](https://user-images.githubusercontent.com/89942570/223546150-cf04c78a-89e4-4254-acf6-9fe1622e63ad.png)
+
 ---
+
 **order form warnings**
-![img_3](https://user-images.githubusercontent.com/89942570/210180149-eb4c3b7d-40c9-46b5-996a-d514d7800520.png)
+
+![img_3](https://user-images.githubusercontent.com/89942570/223546915-7b077319-12fc-4961-83a1-61eb3ebcc2b5.png)
