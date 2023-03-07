@@ -11,6 +11,7 @@ body {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
@@ -29,6 +30,7 @@ body {
 
 .row {
     width: 25%;
+    min-width: 200px;
     background-color: cadetblue;
     display: inline-block;
     text-align: center;
@@ -44,7 +46,7 @@ body {
     /* border:1px solid #ccc; */
     padding:10px;
     /* margin:0 0 10px; */
-    display:block;
+    display:flex;
 }
 
 .row:hover {
@@ -62,9 +64,10 @@ body {
 }
 
 img.type {
-    width: 40%;
+    width: 60%;
     height: 120px;
-    float: end;
+    margin-left: auto;
+    border-radius: 4px;
 }
 
 h1, h3 {
@@ -72,22 +75,59 @@ h1, h3 {
     text-align: center;
 }
 
-button {
-    width: 200px;
+.button {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form-field {
+    width: 30%;
+    min-width: 320px;
     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 8px;
-    display: inline-grid;
+    display: grid;
+    /*column-count: 2;*/
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.form-field label {
+    min-width: 100px;
 }
 
 .form-field input {
-    width: 240px;
+    min-width: 240px;
+    margin-left: auto;
+}
+
+.form-field > .validationError {
+    grid-column: 1 / span 2;
+}
+
+#order-list{
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    display: block;
+}
+
+#another {
+    text-align: center;
+}
+
+#order-list > ul, li{
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
 }
 
 .validationError {
     color: tomato;
+    text-align: left;
 }
 
 form.logout {
