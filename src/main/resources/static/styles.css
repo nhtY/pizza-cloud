@@ -21,6 +21,12 @@ body {
     margin-left: 120px;
 }
 
+.ingredient-type {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .row {
     width: 25%;
     background-color: cadetblue;
@@ -28,9 +34,10 @@ body {
     text-align: center;
     margin: 12px;
     /* padding: 8px; */
-    border: 1px solid black;
-    border-radius: 4px;
-    box-shadow: 10px 5px 5px black;
+    border: 2px solid midnightblue;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 2px 5px 5px 4px darkgrey;
 }
 
 .clickableLabel {
@@ -40,8 +47,8 @@ body {
     display:block;
 }
 
-.clickableLabel:hover {
-    background: #79a9ab;
+.row:hover {
+    background: #439293;
     cursor:pointer;
 }
 
@@ -81,4 +88,22 @@ button {
 
 .validationError {
     color: tomato;
+}
+
+form.logout {
+    display: flex;
+    justify-content: right;
+}
+
+input#logout {
+    background-color: #439293;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: azure;
+}
+
+input#logout:hover {
+    background-color: #276969;
 }
