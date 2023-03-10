@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <title>Pizza Cloud | Register</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Cloud | Register</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
 
-    <h1>Register</h1>
 
-    <img th:src="@{/images/pizza-cloud-logo.svg}">
+
+<div class="bg-img-box">
 
     <form th:action="@{/register}" method="POST" id="registerForm">
 
-        <label th:for="username">Kullanıcı Adı: </label>
-        <input type="text" name="username"> <br>
+        <h1 style="color: white">Register</h1>
 
-        <label th:for="password">Şifre: </label>
-        <input type="password" name="password"> <br>
+        <div class="form-field">
+            <label th:for="username">Kullanıcı Adı: </label>
+            <input type="text" name="username">
+        </div>
 
-        <label th:for="confirm">Şifre tekrar: </label>
-        <input type="password" name="confirm"> <br>
+        <div class="form-field">
+            <label th:for="password">Şifre: </label>
+            <input type="password" name="password">
+        </div>
 
-        <label th:for="fullName">İsim soyisim: </label>
-        <input type="text" name="fullName"> <br>
 
-        <label th:for="street">Cadde: </label>
-        <input type="text" name="street"> <br>
 
-        <label th:for="city">Şehir: </label>
-        <input type="text" name="city"> <br>
+        <div class="form-field">
+            <label th:for="confirm">Şifre tekrar: </label>
+            <input type="password" name="confirm">
+        </div>
 
-        <label th:for="zip">Zip: </label>
-        <input type="text" name="zip"> <br>
 
-        <label th:for="phone">Telefon: </label>
-        <input type="text" name="phone"> <br>
 
-        <input type="submit" value="Kayıt Ol">
+        <div class="form-field">
+            <label th:for="fullName">İsim soyisim: </label>
+            <input type="text" name="fullName">
+        </div>
+
+
+
+        <div class="form-field">
+            <label th:for="street">Cadde: </label>
+            <input type="text" name="street">
+        </div>
+
+
+
+        <div class="form-field">
+            <label th:for="city">Şehir: </label>
+            <input type="text" name="city">
+        </div>
+
+
+
+        <div class="form-field">
+            <label th:for="zip">Zip: </label>
+            <input type="text" name="zip">
+        </div>
+
+
+
+        <div class="form-field">
+            <label th:for="phone">Telefon: </label>
+            <input type="text" name="phone">
+        </div>
+
+        <div class="btnRegisterPart">
+            <input id="btnRegister" type="submit" value="Kayıt Ol">
+        </div>
 
     </form>
+</div>
 
-    </body>
+</body>
 </html>
