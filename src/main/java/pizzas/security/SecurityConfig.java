@@ -36,17 +36,16 @@ public class SecurityConfig {
                         (request) -> request
                                 .requestMatchers("/design", "/orders/**").hasRole("USER")
                                 .requestMatchers("/", "/**").permitAll()
-                                .anyRequest().authenticated()
                 )
                 .formLogin()
-                .loginPage("/login")//.permitAll()
-                .defaultSuccessUrl("/design")
+                    .loginPage("/login")
+                        .defaultSuccessUrl("/design", true)
                 .and()
-                .oauth2Login()
-                .loginPage("/login")
+                    .oauth2Login()
+                        .loginPage("/login").defaultSuccessUrl("/design", true)
                 .and()
-                .logout()
-                .logoutSuccessUrl("/");
+                    .logout()
+                        .logoutSuccessUrl("/");
         return http.build();
     }
 

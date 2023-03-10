@@ -21,3 +21,7 @@ spring:
           google:
             authorization-uri: https://accounts.google.com/o/oauth2/auth
             token-uri: https://oauth2.googleapis.com/token
+logging:
+  level:
+    web: debug
+    pizzas: debug
