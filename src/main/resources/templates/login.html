@@ -2,48 +2,52 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Pizza Cloud | Login</title>
+    <meta charset="UTF-8">
+    <title>Pizza Cloud | Login</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
-<link rel="stylesheet" th:href="@{/styles.css}" />
 
 <body>
-<h1>Login</h1>
 <!--    <img th:src="@{/images/pizza-cloud-logo.svg}">-->
 
 <div th:if="${error}">
-  Giriş gerçekleştirilemedi. Kullanıcı adınızı ve şifrenizi kontrol ediniz.
+    Giriş gerçekleştirilemedi. Kullanıcı adınızı ve şifrenizi kontrol ediniz.
 </div>
 
-<div id="login-box">
-  <img th:src="@{/images/pizza-cloud-logo.svg}">
+<div class="bg-img-box">
+    <img  id="rotate" th:src="@{/images/pizza.svg}">
 
-  <div id="login-fields">
-    <form method="POST" th:action="@{/login}" id="loginForm">
+    <div id="login-fields">
+        <h1 style="color: white">Login</h1>
+        <form method="POST" th:action="@{/login}" id="loginForm">
 
-      <div class="grid2">
-        <label for="username">Kullanıcı adı: </label>
-        <input type="text" name="username" id="username">
+            <div class="grid2">
+                <label for="username">Kullanıcı adı: </label>
+                <input type="text" name="username" id="username">
 
-        <label for="password">Şifre: </label>
-        <input type="password" name="password" id="password">
-      </div>
-      <div id="btn-part">
-        <input id="btnSignin" type="submit" value="Login">
-      </div>
+                <label for="password">Şifre: </label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div id="btn-part">
+                <input id="btnSignin" type="submit" value="Login">
+            </div>
 
-    </form>
+        </form>
 
-    <p id="go-register">Hesabınız yok mu? Tıklayın:
-      <a th:href="@{/register}">kaydol</a>
-    </p>
-    <div id="google-singin">
-      <a th:href="@{/oauth2/authorization/google}">
-        Google ile giriş yap..
-      </a>
+        <hr>
+
+        <p id="go-register" class="center">Hesabınız yok mu?
+            <a th:href="@{/register}">kaydol</a>
+        </p>
+
+        <div id="google-signin">
+            <a style="padding: 0px" th:href="@{/oauth2/authorization/google}" class="center">
+                <p>Google ile giriş yap</p>
+                <img style="width: 32px; height: 32px" th:src="@{/images/google-logo.png}" class="center">
+            </a>
+        </div>
+
     </div>
-
-  </div>
 </div>
 </body>
 </html>
