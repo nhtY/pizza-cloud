@@ -162,12 +162,7 @@ input#logout:hover {
 }
 
 .bg-img-box > img {
-    filter: blur(4px);
-    /*-webkit-filter: blur(4px);*/
-
-    /* Full height */
-    height: 100%;
-
+    height: 700px;
 }
 
 #rotate {
@@ -188,9 +183,10 @@ input#logout:hover {
     position: absolute;
     top: 20%;
     border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.44);
+    background-color: rgba(0, 0, 0, 0.60);
     color: white;
     padding: 40px 20px 40px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #loginForm {
@@ -257,9 +253,10 @@ input#logout:hover {
 }
 
 #google-signin > a:hover {
-    background-color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 #registerForm {
+    position: absolute;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;

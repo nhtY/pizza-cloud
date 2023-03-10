@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Pizza Cloud | Register</title>
@@ -12,60 +12,86 @@
 
 <div class="bg-img-box">
 
-    <form th:action="@{/register}" method="POST" id="registerForm">
+    <img th:src="@{/images/register.png}">
+
+    <form th:action="@{/register}" method="POST" th:object="${registrationForm}" id="registerForm">
 
         <h1 style="color: white">Register</h1>
 
         <div class="form-field">
             <label th:for="username">Kullanıcı Adı: </label>
-            <input type="text" name="username">
+            <input type="text" th:field="*{username}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('username')}"
+                 th:errors="*{username}">username Error</div>
         </div>
 
         <div class="form-field">
             <label th:for="password">Şifre: </label>
-            <input type="password" name="password">
+            <input type="password" th:field="*{password}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('password')}"
+                 th:errors="*{password}">password Error</div>
         </div>
 
 
 
         <div class="form-field">
             <label th:for="confirm">Şifre tekrar: </label>
-            <input type="password" name="confirm">
+            <input type="password" th:field="*{password}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('password')}"
+                 th:errors="*{password}">password Error</div>
         </div>
 
 
 
         <div class="form-field">
             <label th:for="fullName">İsim soyisim: </label>
-            <input type="text" name="fullName">
+            <input type="text" th:field="*{fullName}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('fullName')}"
+                 th:errors="*{fullName}">fullName Error</div>
         </div>
 
 
 
         <div class="form-field">
             <label th:for="street">Cadde: </label>
-            <input type="text" name="street">
+            <input type="text" th:field="*{street}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('street')}"
+                 th:errors="*{street}">street Error</div>
         </div>
 
 
 
         <div class="form-field">
             <label th:for="city">Şehir: </label>
-            <input type="text" name="city">
+            <input type="text" th:field="*{city}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('city')}"
+                 th:errors="*{city}">city Error</div>
         </div>
 
 
 
         <div class="form-field">
             <label th:for="zip">Zip: </label>
-            <input type="text" name="zip">
+            <input type="text" th:field="*{zip}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('zip')}"
+                 th:errors="*{zip}">zip Error</div>
         </div>
 
 
 
         <div class="form-field">
             <label th:for="phone">Telefon: </label>
-            <input type="text" name="phone">
+            <input type="text" th:field="*{phone}">
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('phone')}"
+                 th:errors="*{phone}">phone Error</div>
         </div>
 
         <div class="btnRegisterPart">

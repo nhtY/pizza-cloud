@@ -43,7 +43,7 @@ public class SecurityConfig {
                 .defaultSuccessUrl("/design")
                 .and()
                 .oauth2Login()
-                .loginPage("/login").permitAll()
+                .loginPage("/login")
                 .and()
                 .logout()
                 .logoutSuccessUrl("/");
