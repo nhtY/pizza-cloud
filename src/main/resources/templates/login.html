@@ -8,11 +8,6 @@
 </head>
 
 <body>
-<!--    <img th:src="@{/images/pizza-cloud-logo.svg}">-->
-
-<div th:if="${error}">
-    Giriş gerçekleştirilemedi. Kullanıcı adınızı ve şifrenizi kontrol ediniz.
-</div>
 
 <div class="bg-img-box">
     <img th:src="@{/images/security.svg}">
@@ -27,6 +22,9 @@
 
                 <label for="password">Şifre: </label>
                 <input type="password" name="password" id="password">
+            </div>
+            <div class="validationError" th:if="${error}">
+                Giriş gerçekleştirilemedi. Kullanıcı adınızı ve şifrenizi kontrol ediniz.
             </div>
             <div id="btn-part">
                 <input id="btnSignin" type="submit" value="Login">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Pizza Cloud | Register</title>
@@ -14,13 +14,13 @@
 
     <img th:src="@{/images/register.png}">
 
-    <form th:action="@{/register}" method="POST" th:object="${registrationForm}" id="registerForm">
+    <form th:action="@{/register}" method="POST" id="registerForm" th:object="${registrationForm}">
 
         <h1 style="color: white">Register</h1>
 
         <div class="form-field">
             <label th:for="username">Kullanıcı Adı: </label>
-            <input type="text" name="username" th:field="*{username}">
+            <input type="text" name="username">
             <div class="validationError"
                  th:if="${#fields.hasErrors('username')}"
                  th:errors="*{username}">username Error</div>
@@ -28,7 +28,7 @@
 
         <div class="form-field">
             <label th:for="password">Şifre: </label>
-            <input type="password" name="password" th:field="*{password}">
+            <input type="password" name="password">
             <div class="validationError"
                  th:if="${#fields.hasErrors('password')}"
                  th:errors="*{password}">password Error</div>
@@ -38,7 +38,7 @@
 
         <div class="form-field">
             <label th:for="confirm">Şifre tekrar: </label>
-            <input type="password" name="confirm" th:field="*{password}">
+            <input type="password" name="confirm">
             <div class="validationError"
                  th:if="${#fields.hasErrors('password')}"
                  th:errors="*{password}">password Error</div>
@@ -48,7 +48,7 @@
 
         <div class="form-field">
             <label th:for="fullName">İsim soyisim: </label>
-            <input type="text" name="fullName" th:field="*{fullName}">
+            <input type="text" name="fullName">
             <div class="validationError"
                  th:if="${#fields.hasErrors('fullName')}"
                  th:errors="*{fullName}">fullName Error</div>
@@ -58,7 +58,7 @@
 
         <div class="form-field">
             <label th:for="street">Cadde: </label>
-            <input type="text" name="street" th:field="*{street}">
+            <input type="text" name="street">
             <div class="validationError"
                  th:if="${#fields.hasErrors('street')}"
                  th:errors="*{street}">street Error</div>
@@ -68,7 +68,7 @@
 
         <div class="form-field">
             <label th:for="city">Şehir: </label>
-            <input type="text" name="city" th:field="*{city}">
+            <input type="text" name="city">
             <div class="validationError"
                  th:if="${#fields.hasErrors('city')}"
                  th:errors="*{city}">city Error</div>
@@ -78,7 +78,7 @@
 
         <div class="form-field">
             <label th:for="zip">Zip: </label>
-            <input type="text" name="zip" th:field="*{zip}">
+            <input type="text" name="zip">
             <div class="validationError"
                  th:if="${#fields.hasErrors('zip')}"
                  th:errors="*{zip}">zip Error</div>
@@ -88,7 +88,7 @@
 
         <div class="form-field">
             <label th:for="phone">Telefon: </label>
-            <input type="text" name="phone" th:field="*{phone}">
+            <input type="text" name="phone">
             <div class="validationError"
                  th:if="${#fields.hasErrors('phone')}"
                  th:errors="*{phone}">phone Error</div>
