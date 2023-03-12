@@ -21,6 +21,9 @@ public class PizzaOrder implements Serializable {
     private Long id;
     private Date placedAt = new Date();
 
+    @ManyToOne
+    private User user;
+
     /** The name of the person who will receive the order **/
     @NotBlank(message = "Teslim alacak kişinin adı gereklidir")
     private String deliveryName;
